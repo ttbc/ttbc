@@ -9,11 +9,20 @@
     animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+::selection {
+    @include blur();
 }
 
-::selection {
-    background: rgba(255,255,255,0.5);
+body {
+    font-family: $font-family;
+    color: $primary-color;
+    font-weight: 300;
+}
+
+a {
+    color: $primary-color;
+}
+
+h1 {
+    font-weight: 400;
 }

@@ -1,3 +1,22 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* fullPage.js */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #fff;
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Open Sans", sans-serif;
+}
+
 .loader {
   border: 16px solid #f3f3f3;
   /* Light grey */
@@ -9,19 +28,14 @@
   animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 ::selection {
+  background: #fff;
+  /* fallback */
   background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
-/*@import "partials/logo";*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
@@ -43,6 +57,7 @@ h1 {
   z-index: 1;
   width: 100%;
   background: #fff;
+  /* fallback */
   background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -56,6 +71,7 @@ h1 {
   margin: 0;
 }
 .site-header .header-main .site-title a {
+  font-family: Bariol, sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -105,19 +121,11 @@ div.site-main {
   max-width: 800px;
   margin: 0 auto;
   margin-top: 80px;
+  padding: 0 60px;
 }
 
 .site-footer {
   text-align: center;
 }
 
-/* fullPage.js */
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background: #fff;
-}
-
-#fp-nav ul li .fp-tooltip {
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Open Sans", sans-serif;
-}
+/*@import "partials/logo";*/

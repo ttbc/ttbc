@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
 //        navigationTooltips: ['About', 'References', 'Contact'],
         showActiveTooltip: true,
         //Scrolling
-        autoScrolling: false
+        autoScrolling: false,
+        fitToSection: false,
     });
 });

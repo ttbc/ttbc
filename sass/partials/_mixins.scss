@@ -1,0 +1,13 @@
+@import "partials/variables";
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@mixin blur($color: $primary-color, $blur: 10px, $opacity: 0.5) {
+    background: $primary-color; /* fallback */
+    background: rgba($primary-color, $opacity);
+    -webkit-backdrop-filter: blur($blur);
+    backdrop-filter: blur($blur);
+}

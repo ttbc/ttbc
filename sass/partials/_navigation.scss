@@ -1,0 +1,50 @@
+@import "partials/variables";
+
+.secondary-navigation {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 150px;
+    margin-left: 20px;
+
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        margin: 5px 0 5px 0;
+        border-radius: 10px;
+
+        a {
+            color: $primary-color;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            border:2px solid $primary-color;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 4px;
+            margin-right: 5px;
+            vertical-align: baseline;
+        }
+    }
+
+    .menu-item.current-menu-item,
+    .menu-item:hover {
+        a {
+            color: $primary-color;
+        }
+
+        &:before {
+            background-color: $primary-color;
+            background: rgba(255,255,255,0.5);
+        }
+    }
+
+}

@@ -1,0 +1,28 @@
+@import "partials/variables";
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    
+    @include blur();
+
+    .header-main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 20px;
+
+        .site-title {
+            margin: 0;
+
+            a {
+                font-family: $font-family-logo;
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+
+    }
+}

@@ -1,8 +1,14 @@
-@import "partials/variables";
-
 div.site-main {
     max-width: 800px;
     margin: 0 auto;
     margin-top: 80px;
     padding: 0 60px;
+}
+
+.development-icon {
+    font-size: 20em;
+}
+
+.section-development {
+    text-align: center;
 }

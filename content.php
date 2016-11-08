@@ -12,7 +12,7 @@
 $post = get_post();
 ?>
 
-<div class="section">
+<div id="<?php echo $post->post_name ?>" class="section section-<?php echo $post->post_name ?>">
     <header class="entry-header">
         <?php
         the_title('<h1 class="entry-title">', '</h1>');

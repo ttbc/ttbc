@@ -1,13 +1,32 @@
-@import "partials/variables";
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-@mixin blur($color: $primary-color, $blur: 10px, $opacity: 0.5) {
-    background: $primary-color; /* fallback */
-    background: rgba($primary-color, $opacity);
+@mixin blur($color: $color-white, $blur: 10px, $opacity: 0.5) {
+    background: $color; /* fallback */
+    background: rgba($color, $opacity);
     -webkit-backdrop-filter: blur($blur);
     backdrop-filter: blur($blur);
+}
+
+@mixin placeholder($color: $color-white, $opacity: 0.5) {
+    &::-webkit-input-placeholder { /* Chrome */
+        color: $color;
+        color: rgba($color-white, $opacity);
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: $color;
+        color: rgba($color-white, $opacity);
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: $color;
+        color: rgba($color-white, $opacity);
+        opacity: 1;
+    }
+    &:-moz-placeholder { /* Firefox 4 - 18 */
+        color: $color;
+        color: rgba($color-white, $opacity);
+        opacity: 1;
+    }
 }

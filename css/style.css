@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+/* fonts */
+/* colors */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -124,8 +130,77 @@ div.site-main {
   padding: 0 60px;
 }
 
+.development-icon {
+  font-size: 20em;
+}
+
+.section-development {
+  text-align: center;
+}
+
 .site-footer {
   text-align: center;
+}
+
+.button {
+  color: #fff;
+  background-color: transparent;
+  padding: 8px 20px;
+  border: 2px solid #fff;
+  border-radius: 20px/50%;
+  cursor: pointer;
+  outline: none;
+}
+.button:hover {
+  background: #fff;
+  /* fallback */
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.button:active {
+  color: #f57c00;
+  background-color: #fff;
+}
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+  background: #fff;
+  /* fallback */
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file])::-webkit-input-placeholder {
+  /* Chrome */
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file])::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus {
+  outline: none;
+  background: #fff;
+  /* fallback */
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 /*@import "partials/logo";*/

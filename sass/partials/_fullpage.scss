@@ -1,5 +1,3 @@
-@import "partials/variables";
-
 /* fullPage.js */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -7,6 +5,6 @@
 }
 
 #fp-nav ul li .fp-tooltip {
-    color: rgba($primary-color, 0.5);
+    color: rgba($color-white, 0.5);
     font-family: $font-family;
 }

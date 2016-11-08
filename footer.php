@@ -12,13 +12,9 @@
 
 		</div><!-- #main -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
-
-			<div class="site-info">
-				<?php do_action( 'ttbc_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://ttbc.dk/', 'ttbc' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'ttbc' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
+		<footer id="footer">
+                    
+		</footer><!-- #footer -->
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>

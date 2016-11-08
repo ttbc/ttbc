@@ -52,6 +52,8 @@ if (!function_exists('ttbc_setup')) {
 
         // This theme uses its own gallery styles.
         add_filter('use_default_gallery_style', '__return_false');
+        
+        add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
     }
 
 } // theme_setup
@@ -66,19 +68,22 @@ add_action('after_setup_theme', 'ttbc_setup');
 function ttbc_scripts() {
     $suffix = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '.min';
 
-    // Add Lato font, used in the main stylesheet.
-    wp_register_style('ttbc-open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,300italic,300,700,700italic', array(), null);
+    // Add open sans font, used in the main stylesheet.
+    wp_register_style('open-sans', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,300italic,300,700,700italic', array(), null);
 
     //fullPage.js
-    wp_register_style('ttbc-fullPage', get_template_directory_uri() . '/css/jquery.fullPage.css', array('ttbc-open-sans'), '2.8.8');
-    wp_register_script('ttbc-fullPage', get_template_directory_uri() . '/js/jquery.fullPage' . $suffix . '.js', array('jquery'), '2.8.8');
+    wp_register_style('fullpage', get_template_directory_uri() . '/css/jquery.fullPage.css', array('open-sans'), '2.8.8');
+    wp_register_script('fullpage', get_template_directory_uri() . '/js/jquery.fullPage' . $suffix . '.js', array('jquery'), '2.8.8');
 
+    //font-awesome
+    wp_register_style('font-awesome', get_template_directory_uri() . '/css/font-awesome' . $suffix . '.css', array(), '4.7.0');
+   
     //progressbar.js
-    wp_register_script('ttbc-progressbar', get_template_directory_uri() . '/js/progressbar.min.js', array('jquery'), '1.0.1');
+    wp_register_script('progressbar', get_template_directory_uri() . '/js/progressbar.min.js', array('jquery'), '1.0.1');
 
     // Load our main stylesheet.
-    wp_register_style('ttbc-style', get_template_directory_uri() . '/css/style' . $suffix . '.css', array('ttbc-fullPage', 'ttbc-open-sans'));
-    wp_register_script('ttbc-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'ttbc-fullPage', 'ttbc-progressbar'), '', true);
+    wp_register_style('ttbc-style', get_template_directory_uri() . '/css/style' . $suffix . '.css', array('fullpage', 'font-awesome', 'open-sans'), '1.0.0');
+    wp_register_script('ttbc-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'fullpage', 'progressbar'), '1.0.0', true);
 
     //enqueue
     wp_enqueue_script('ttbc-script');

@@ -1,0 +1,118 @@
+@import "partials/variables";
+@import "partials/general";
+/*@import "partials/logo";*/
+
+body {
+    font-family: $font-family;
+    color: $primary-color;
+    font-weight: 300;
+}
+
+a {
+    color: $primary-color;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    background: $primary-color;
+    background: rgba(255,255,255,0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    .header-main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 20px;
+
+        .site-title {
+            margin: 0;
+
+            a {
+                color: $primary-color;
+                text-decoration: none;
+            }
+        }
+
+    }
+}
+
+.secondary-navigation {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 150px;
+    margin-left: 20px;
+
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        margin: 5px 0 5px 0;
+        border-radius: 10px;
+
+        a {
+            color: $primary-color;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            border:2px solid $primary-color;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 4px;
+            margin-right: 5px;
+            vertical-align: baseline;
+        }
+    }
+
+    .menu-item.current-menu-item,
+    .menu-item:hover {
+        a {
+            color: $primary-color;
+        }
+
+        &:before {
+            background-color: $primary-color;
+            background: rgba(255,255,255,0.5);
+        }
+    }
+
+}
+
+div.site-main {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.site-footer {
+    text-align: center;
+}
+
+
+
+/* fullPage.js */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: #fff;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: rgba(255,255,255,0.5);
+    font-family: $font-family;
+}

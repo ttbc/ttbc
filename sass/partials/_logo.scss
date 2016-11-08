@@ -1,0 +1,61 @@
+@import "partials/variables";
+
+.site-header .header-main .site-title {
+    font-size:50px;
+    
+    a {
+        display: inline-block;
+        font-weight: 900;
+        line-height: 1;
+        position: relative;
+        color: hsla(0, 0%, 0%, 0.6);
+
+        @include transform-style(preserve-3d);
+        @include perspective(550px);
+
+        z-index: 1;
+
+        &:before,
+        &:after {
+            position: absolute;
+            content: attr(data-letter);
+            line-height: inherit;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            
+            @include transition(all .3s);
+
+            -webkit-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+        }
+
+        &:before {
+            @include transform(scale(1,0.95) skew(-4deg,0deg));
+            color: hsla(0, 0%, 0%, 0.12);
+            text-shadow: none;
+        }
+
+        &:after{ 
+            color: #ee7f72;
+        }
+    }
+
+}
+
+.site-header .header-main .site-title:hover {
+    a {
+        &:before {
+            @include transform(translateY(-0.050em) scale(1,0.55) skew(-10deg,0deg));
+        }
+
+        &:after{ 
+            color: #f09389;
+
+            @include transform( translateY(-0.035em) rotateX(-40deg));
+        }
+    }
+}

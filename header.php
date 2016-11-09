@@ -37,6 +37,10 @@
             <div class="header-main">
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" data-letter="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
+                    <div class="social-icons">
+                        <a href="https://dk.linkedin.com/in/tjalfe" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    </div>
+                    
                     <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
                             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
                     </nav>

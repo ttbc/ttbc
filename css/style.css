@@ -69,18 +69,33 @@ h1 {
   backdrop-filter: blur(10px);
   opacity: 0.5;
 }
+.site-header a {
+  color: #f57c00;
+}
 .site-header .header-main {
   max-width: 800px;
   margin: 0 auto;
   padding: 10px 20px;
 }
+.site-header .header-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .site-header .header-main .site-title {
   margin: 0;
+  float: left;
 }
 .site-header .header-main .site-title a {
   font-family: Bariol, sans-serif;
   color: #f57c00;
   text-decoration: none;
+}
+.site-header .header-main .social-icons {
+  float: right;
+}
+.site-header .header-main .social-icons .fa {
+  font-size: 40px;
 }
 
 .secondary-navigation {

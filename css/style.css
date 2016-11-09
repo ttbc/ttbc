@@ -123,11 +123,13 @@ h1 {
   background: rgba(255, 255, 255, 0.5);
 }
 
-div.site-main {
+.section {
+  padding: 0 60px;
+}
+.section .entry-header,
+.section .entry-content {
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 80px;
-  padding: 0 60px;
 }
 
 .development-icon {
@@ -136,6 +138,7 @@ div.site-main {
 
 .section-development {
   text-align: center;
+  background-color: red;
 }
 
 .site-footer {

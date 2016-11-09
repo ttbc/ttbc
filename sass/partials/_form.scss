@@ -6,6 +6,7 @@
     border-radius: 20px/50%;
     cursor: pointer;
     outline: none;
+    -webkit-appearance: none;
 
     &:hover {
         @include blur($opacity: 0.2);
@@ -20,6 +21,7 @@
 .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
     @include blur($opacity: 0.2);
     @include placeholder($opacity: 0.6);
+    -webkit-appearance: none;
 
     color: $text-color;
     border: 1px solid $color-white;

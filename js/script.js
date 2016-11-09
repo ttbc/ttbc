@@ -10,5 +10,7 @@ jQuery(document).ready(function($) {
         //Scrolling
         autoScrolling: false,
         fitToSection: false,
+        //Design
+//        paddingTop: '5em',
     });
 });

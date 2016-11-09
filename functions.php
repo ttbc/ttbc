@@ -82,7 +82,7 @@ function ttbc_scripts() {
     wp_register_script('progressbar', get_template_directory_uri() . '/js/progressbar.min.js', array('jquery'), '1.0.1');
 
     // Load our main stylesheet.
-    wp_register_style('ttbc-style', get_template_directory_uri() . '/css/style' . $suffix . '.css', array('fullpage', 'font-awesome', 'open-sans'), '1.0.4');
+    wp_register_style('ttbc-style', get_template_directory_uri() . '/css/style' . $suffix . '.css', array('fullpage', 'font-awesome', 'open-sans'), '1.0.6');
     wp_register_script('ttbc-script', get_template_directory_uri() . '/js/script.js', array('jquery', 'fullpage', 'progressbar'), '1.0.0', true);
 
     //enqueue

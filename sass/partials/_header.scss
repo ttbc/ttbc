@@ -5,19 +5,20 @@
     z-index: 1;
     width: 100%;
     
-    @include blur();
+    @include blur($opacity: 1);
+    opacity: 0.5;
 
     .header-main {
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px 20px;
+        padding: 10px 20px;
 
         .site-title {
             margin: 0;
 
             a {
                 font-family: $font-family-logo;
-                color: $text-color;
+                color: $primary-color;
                 text-decoration: none;
             }
         }

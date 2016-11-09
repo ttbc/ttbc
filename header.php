@@ -32,22 +32,15 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<?php if ( get_header_image() ) : ?>
-	<div id="site-header">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-		</a>
-	</div>
-	<?php endif; ?>
 
-	<header class="site-header" role="banner">
-		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" data-letter="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+    <header class="site-header" role="banner">
+            <div class="header-main">
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" data-letter="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>
-		</div>
-	</header><!-- #masthead -->
+                    <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                    </nav>
+            </div>
+    </header><!-- #masthead -->
 
-	<div id="main" class="site-main">
+    <div id="main" class="site-main">

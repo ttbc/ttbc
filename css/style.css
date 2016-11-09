@@ -64,21 +64,22 @@ h1 {
   width: 100%;
   background: #fff;
   /* fallback */
-  background: rgba(255, 255, 255, 0.5);
+  background: white;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  opacity: 0.5;
 }
 .site-header .header-main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 10px 20px;
 }
 .site-header .header-main .site-title {
   margin: 0;
 }
 .site-header .header-main .site-title a {
   font-family: Bariol, sans-serif;
-  color: #fff;
+  color: #f57c00;
   text-decoration: none;
 }
 
@@ -138,7 +139,7 @@ h1 {
 
 .section-development {
   text-align: center;
-  background-color: red;
+  background-color: #f57c00;
 }
 
 .section-contact .entry-header,

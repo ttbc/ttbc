@@ -38,6 +38,14 @@ if (!function_exists('ttbc_setup')) {
         add_theme_support('html5', array(
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ));
+        
+//        add_theme_support('custom-logo', array(
+//            'height' => 50,
+//            'width' => 90,
+//            'flex-height' => true,
+//            'flex-width' => true,
+//            'header-text' => array('site-title', 'site-description'),
+//        ));
 
         // This theme allows users to set a custom background.
         add_theme_support('custom-background', apply_filters('ttbc_custom_background_args', array(

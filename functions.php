@@ -99,4 +99,18 @@ function ttbc_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'ttbc_scripts');
+
+function fonticon_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'tag' => 'i',
+        'icon' => '',
+        'class' => '',
+            ), $atts);
+
+    $tag = esc_attr($atts["tag"]);
+
+    return '<' . $tag . ' class="fa ' . esc_attr($atts["icon"]) . ' ' . esc_attr($atts["class"]) . '"></' . $tag . '>';
+}
+
+add_shortcode('fonticon', 'fonticon_shortcode');
 ?>

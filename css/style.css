@@ -23,6 +23,38 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.development-icon {
+  font-size: 20em;
+  text-shadow: 0 0 1px #fff;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+  /* flip speed goes here */
+}
+.flip-container .flipper {
+  transform-style: preserve-3d;
+  animation: rotation 10s infinite linear;
+  position: relative;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(359deg);
+  }
+}
 .loader {
   border: 16px solid #f3f3f3;
   /* Light grey */
@@ -146,10 +178,6 @@ h1 {
 .section .entry-content {
   max-width: 800px;
   margin: 0 auto;
-}
-
-.development-icon {
-  font-size: 20em;
 }
 
 .section-development {

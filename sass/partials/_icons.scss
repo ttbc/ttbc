@@ -10,17 +10,18 @@
     /* flip speed goes here */ 
     .flipper {
         transform-style: preserve-3d;
-        animation: rotation 10s infinite linear;
+        /*animation: rotation 10s infinite linear;*/
         position: relative;
+        transition: 0.1s linear;
     }
 }
 
 @-webkit-keyframes rotation {
     0% {
-        transform: translate(-50%, -50%) rotate(0);
+        transform: rotate(0);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(359deg);
+        transform: rotate(359deg);
     }
 }
 @keyframes rotation {
